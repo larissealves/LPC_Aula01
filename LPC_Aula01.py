@@ -25,10 +25,12 @@ class Atividade:
         
     def finalizar_atividade(self):
         self.status = 'ATV. FINALIZADA'
+        
+class Endereco:
+    pass
 
 proj = Projeto ('Projeto AAAA', '12/12/2018', '12/12/2019')
 p = Pessoa('25/01/1993', 'Bruno')
 a = Atividade('teste', 1, p, proj)
 a. finalizar_atividade()
 print (a.nome, a.prioridade, a.pessoa, a.projeto,  a.status)
-
