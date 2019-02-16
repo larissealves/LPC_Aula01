@@ -26,11 +26,22 @@ class Atividade:
     def finalizar_atividade(self):
         self.status = 'ATV. FINALIZADA'
         
-class Endereco:
-    pass
+    def __str__(self):
+        return "| Atividade: "+ self.nome 
 
+'''Muitos para Muitos'''
+
+class Projatividade:
+    def __init__(self, projeto, atividade):
+        self.projeto = projeto
+        self.atividade = atividade
+        
+    
 proj = Projeto ('Projeto AAAA', '12/12/2018', '12/12/2019')
 p = Pessoa('25/01/1993', 'Bruno')
 a = Atividade('teste', 1, p, proj)
+projAtv = Projatividade(proj, a)
 a. finalizar_atividade()
 print (a.nome, a.prioridade, a.pessoa, a.projeto,  a.status)
+print('\n')
+print (projAtv.projeto, projAtv.atividade)
